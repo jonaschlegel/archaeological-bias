@@ -1,4 +1,6 @@
-export default function Contact() {
+import ContactForm from '../../components/ContactForm';
+
+export default function ContactPage() {
   return (
     <main className="flex flex-col items-center min-h-screen p-6 lg:p-24">
       <section className="w-full text-center py-10 lg:py-20">
@@ -31,36 +33,6 @@ export default function Contact() {
       </section>
 
       <section className="w-full max-w-3xl text-left py-6 lg:py-12">
-        <h2 className="text-2xl font-semibold mb-4">Why Reach Out?</h2>
-        <p className="text-lg mb-6">
-          There are many reasons to get in touch, but here are a few common
-          ones:
-        </p>
-        <ul className="list-disc pl-6 text-lg mb-6">
-          <li>
-            <strong>Collaboration & Contributions:</strong> Have a case study,
-            research insight, or an idea for the project?
-          </li>
-          <li>
-            <strong>Questions About Bias:</strong> Curious about how bias shapes
-            archaeology or need resources?
-          </li>
-          <li>
-            <strong>Teaching & Education:</strong> Looking for ways to integrate
-            bias discussions into courses?
-          </li>
-          <li>
-            <strong>Media & Talks:</strong> Want to discuss bias in archaeology
-            in a talk, podcast, or article?
-          </li>
-          <li>
-            <strong>General Interest:</strong> Just want to chat about
-            archaeology, history, or the project? That’s great too!
-          </li>
-        </ul>
-      </section>
-
-      <section className="w-full max-w-3xl text-left py-6 lg:py-12">
         <h2 className="text-2xl font-semibold mb-4">How to Reach Me</h2>
         <p className="text-lg mb-6">
           The easiest way to get in touch is by email. Send your message, and
@@ -83,65 +55,7 @@ export default function Contact() {
           You can also use the form below to send a message directly:
         </p>
 
-        <form className="w-full max-w-2xl mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
-          <div className="mb-4">
-            <label
-              htmlFor="name"
-              className="block text-lg font-medium mb-2 text-black"
-            >
-              Your Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              className="w-full p-3 border rounded-lg text-black"
-              placeholder="Full Name"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="email"
-              className="block text-lg font-medium mb-2 text-black"
-            >
-              Your Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              className="w-full p-3 border rounded-lg text-black"
-              placeholder="Email Address"
-              required
-            />
-          </div>
-
-          <div className="mb-4">
-            <label
-              htmlFor="message"
-              className="block text-lg font-medium mb-2 text-black"
-            >
-              Your Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              className="w-full p-3 border rounded-lg text-black"
-              rows={5}
-              placeholder="Type your message here..."
-              required
-            ></textarea>
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white p-3 rounded-lg font-semibold hover:bg-blue-700 transition"
-          >
-            Send Message
-          </button>
-        </form>
+        <ContactForm />
       </section>
     </main>
   );
