@@ -4,9 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const navItems: { id: string; label: string; href: `/${string}` }[] = [
-  { id: 'home', label: 'Home', href: '/' },
   { id: 'about', label: 'About', href: '/about' },
-  { id: 'services', label: 'Services', href: '/services' },
   { id: 'contact', label: 'Contact', href: '/contact' },
 ];
 
@@ -24,7 +22,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Menu */}
           <div className="hidden md:flex space-x-6">
             {navItems.map((item) => (
               <Link
